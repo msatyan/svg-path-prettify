@@ -22,8 +22,20 @@ Is turned into:
 
 ## Use
 
+Required as a module:
+
 ```javascript
-const svgPrettify = require('svg-path-prettify');
-const svgPath = 'M1051 0l-113 158h-673l-113 -158h-138l507 710h161l510 -710h-141zM342 267h518l-259 362z';
-svgPrettify(svgPath);
+const svgPathPrettify = require('svg-path-prettify');
+let svgPath = 'M1051 0l-113 158h-673l-113 -158h-138l507 710h161l510 -710h-141zM342 267h518l-259 362z';
+svgPathPrettify(svgPath);
+```
+
+Loaded as a script:
+
+```html
+<script src="/node_modules/svg-path-prettify/svg-path-prettify.min.js"></script>
+<script type="text/javascript">
+  var svgPath = 'M1051 0l-113 158h-673l-113 -158h-138l507 710h161l510 -710h-141zM342 267h518l-259 362z';
+  svgPathPrettify(svgPath);
+</script>
 ```
