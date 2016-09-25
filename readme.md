@@ -2,6 +2,12 @@
 
 Prettifies a SVG path by adding spaces between commands.
 
+## Install
+
+```shell
+npm install svg-path-prettify --save
+```
+
 ## Result
 
 ```javascript

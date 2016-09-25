@@ -1,11 +1,22 @@
 {
   "name": "svg-path-prettify",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "svg-path-prettify",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build-babel && npm run build-webpack && npm run build-uglify",
+    "build-babel": "babel index.js -o svg-path-prettify.min.js",
+    "build-uglify": "uglifyjs svg-path-prettify.min.js -o svg-path-prettify.min.js -c",
+    "build-webpack": "webpack svg-path-prettify.min.js svg-path-prettify.min.js",
     "test": "node test.js"
   },
   "author": "Robert Janes",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.14.0",
+    "babel-plugin-transform-es2015-modules-umd": "^6.12.0",
+    "babel-preset-es2015": "^6.14.0",
+    "uglify-js": "^2.7.3"
+  }
 }
