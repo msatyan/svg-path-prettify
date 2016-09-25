@@ -1,0 +1,11 @@
+{
+  "name": "svg-path-prettify",
+  "version": "0.1.1",
+  "description": "svg-path-prettify",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Robert Janes",
+  "license": "ISC"
+}
