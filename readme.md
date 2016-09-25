@@ -1,6 +1,6 @@
 # svg-path-prettify
 
-Prettifies an SVG path by adding spaces between commands.
+Prettifies a SVG path by adding spaces between commands.
 
 ## Result
 
