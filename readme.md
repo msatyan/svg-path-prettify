@@ -39,3 +39,11 @@ Loaded as a script:
   svgPathPrettify(svgPath);
 </script>
 ```
+
+The result can be split by spaces into an array of sequencial commands.
+
+```javascript
+let prettifiedPath = svgPathPrettify(svgPath);
+let prettifiedPathSplit = prettifiedPath.split(' ');
+
+```

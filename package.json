@@ -1,14 +1,24 @@
 {
   "name": "svg-path-prettify",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "svg-path-prettify",
+  "keywords": [
+    "svg",
+    "path",
+    "prettify"
+  ],
   "main": "index.js",
   "scripts": {
     "build": "npm run build-babel && npm run build-webpack && npm run build-uglify",
     "build-babel": "babel index.js -o svg-path-prettify.min.js",
     "build-uglify": "uglifyjs svg-path-prettify.min.js -o svg-path-prettify.min.js -c",
     "build-webpack": "webpack svg-path-prettify.min.js svg-path-prettify.min.js",
-    "test": "node test.js"
+    "test": "node ./test/test.js",
+    "test-browser": "open ./test/test.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/robertjanes/svg-path-prettify"
   },
   "author": "Robert Janes",
   "license": "ISC",
