@@ -3,12 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>svg-path-prettify</title>
+    <style media="screen">
+      body {
+        overflow-x: hidden;
+        height: 100%;
+      }
+      svg {
+        width: 100%;
+        height: 100vh;
+        transform-origin: top left;
+        transform: scale(0.6);
+        -webkit-transform: scale(0.6);
+      }
+      path {
+        fill: black;
+      }
+    </style>
   </head>
   <body>
+    <p id="resultText"></p>
+    <svg id="resultSVG" xmlns="http://www.w3.org/2000/svg"></svg>
     <script src="../svg-path-prettify.min.js"></script>
     <script type="text/javascript">
       var svgPath = 'M1051.123 0l-113,158h-673l-113 -158,h-138l507 710h161l,510 -710h-141zM342 267h518l-259 362z';
-      console.log(svgPathPrettify(svgPath));
+      var svgPathPretty = svgPathPrettify(svgPath);
+
+      var resultSVG = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      resultSVG.setAttribute('d', svgPathPretty);
+      document.querySelector('#resultText').innerHTML = svgPathPretty;
+      document.querySelector('#resultSVG').appendChild(resultSVG);
+      console.log(svgPathPretty);
     </script>
   </body>
 </html>
